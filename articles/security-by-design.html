@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔐 Security by Design | Risk Copilot</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+  <main class="article-page reveal visible">
+    <a class="back-link" href="../index.html">← Retour à l'accueil</a>
+    <article class="article-card">
+      <h1>🔐 Security by Design</h1>
+      <div class="article-meta"><span>IAM</span><span>Gouvernance</span><span>Protection des données</span></div>
+
+      <p class="article-lead">Dans Risk Copilot, la sécurité doit être intégrée dès la conception, car la plateforme manipule potentiellement des documents sensibles : rapports d’audit, politiques internes, risques opérationnels ou données de conformité.</p>
+      <h2>Principes de sécurité</h2>
+      <p>Une application de Risk Management doit garantir confidentialité, traçabilité et contrôle d’accès. L’architecture AWS permet d’intégrer ces principes à plusieurs niveaux : identité, stockage, réseau, logs et permissions.</p>
+      <div class="diagram">
+        <div class="diagram-title">Couches de sécurité</div>
+        <div class="layered">
+          <div class="layer"><strong>Identité</strong><p>Gestion des utilisateurs, rôles et permissions avec une logique de moindre privilège.</p></div>
+          <div class="layer"><strong>Données</strong><p>Stockage sécurisé, chiffrement, séparation des environnements et contrôle des accès aux documents.</p></div>
+          <div class="layer"><strong>Applications</strong><p>Validation des entrées, limitation des actions, contrôle des appels API et protection contre les usages abusifs.</p></div>
+          <div class="layer"><strong>Observabilité</strong><p>Logs, traces, alertes et suivi des événements importants pour faciliter l’audit.</p></div>
+        </div>
+      </div>
+      <h2>Gestion des accès</h2>
+      <p>IAM permet de définir précisément quels services peuvent communiquer entre eux. Par exemple, une fonction Lambda peut être autorisée à lire un bucket S3 spécifique, mais pas à accéder à l’ensemble des ressources du compte AWS.</p>
+      <div class="callout"><strong>Bonne pratique :</strong> appliquer le principe du moindre privilège. Chaque composant reçoit uniquement les permissions nécessaires à sa mission.</div>
+      <h2>Protection des documents</h2>
+      <p>Les documents analysés par Risk Copilot peuvent contenir des informations critiques. Il est donc important de gérer le chiffrement, les politiques d’accès, les logs d’utilisation et la suppression contrôlée des fichiers.</p>
+      <h2>Gouvernance IA</h2>
+      <p>La sécurité ne concerne pas seulement l’infrastructure. Elle concerne aussi l’usage de l’IA : éviter l’exposition d’informations sensibles, encadrer les prompts, limiter les réponses hors périmètre et conserver une validation humaine pour les décisions importantes.</p>
+    </article>
+  </main>
+</body>
+</html>

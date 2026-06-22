@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>☁️ Architecture & Scalability | Risk Copilot</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+  <main class="article-page reveal visible">
+    <a class="back-link" href="../index.html">← Retour à l'accueil</a>
+    <article class="article-card">
+      <h1>☁️ Architecture & Scalability</h1>
+      <div class="article-meta"><span>AWS</span><span>Cloud Native</span><span>Serverless</span></div>
+
+      <p class="article-lead">L’architecture de Risk Copilot repose sur une logique cloud native : séparer l’interface, l’API, le traitement IA, le stockage documentaire et le monitoring afin d’obtenir une plateforme claire, évolutive et sécurisée.</p>
+      <h2>Vue d’ensemble</h2>
+      <p>Risk Copilot est conçu comme une application web connectée à plusieurs services AWS. L’utilisateur interagit avec une interface frontend. Les requêtes passent par une API, sont traitées par des fonctions backend, puis enrichies par les services d’IA et les bases de données.</p>
+      <div class="diagram">
+        <div class="diagram-title">Architecture logique AWS</div>
+        <div class="flow">
+          <div class="node">Frontend<small>interface utilisateur</small></div><div class="arrow">→</div>
+          <div class="node">API Gateway<small>point d'entrée sécurisé</small></div><div class="arrow">→</div>
+          <div class="node">Lambda<small>logique backend</small></div><div class="arrow">→</div>
+          <div class="node">Bedrock<small>modèles IA</small></div><div class="arrow">→</div>
+          <div class="node">S3 / DB<small>documents et données</small></div>
+        </div>
+      </div>
+      <h2>Rôle des composants</h2>
+      <div class="layered">
+        <div class="layer"><strong>Interface Web</strong><p>Permet à l’utilisateur d’envoyer une question, charger un document, consulter une analyse ou parcourir les résultats.</p></div>
+        <div class="layer"><strong>API Gateway</strong><p>Expose les endpoints de l’application, contrôle l’accès et transmet les requêtes vers le backend.</p></div>
+        <div class="layer"><strong>AWS Lambda</strong><p>Exécute la logique métier : préparation du prompt, appel au modèle IA, récupération du contexte et formatage de la réponse.</p></div>
+        <div class="layer"><strong>Amazon Bedrock</strong><p>Fournit les capacités d’IA générative utilisées pour analyser le contenu, synthétiser l’information et générer des recommandations.</p></div>
+        <div class="layer"><strong>Amazon S3</strong><p>Stocke les documents analysés : politiques internes, rapports d’audit, procédures et fichiers de référence.</p></div>
+        <div class="layer"><strong>DynamoDB</strong><p>Peut stocker les métadonnées, historiques d’analyse, conversations, risques identifiés et plans d’action.</p></div>
+      </div>
+      <h2>Scalabilité</h2>
+      <p>L’approche serverless permet d’adapter automatiquement les ressources au volume d’utilisation. Lorsque le nombre de documents ou de requêtes augmente, les fonctions backend peuvent être exécutées à la demande, sans gérer manuellement des serveurs.</p>
+      <p>Cette architecture est adaptée à un projet portfolio, mais elle peut aussi évoluer vers une version entreprise avec authentification avancée, files de traitement asynchrones, pipeline d’indexation documentaire et observabilité complète.</p>
+    </article>
+  </main>
+</body>
+</html>

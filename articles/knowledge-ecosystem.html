@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📚 Knowledge Ecosystem | Risk Copilot</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+  <main class="article-page reveal visible">
+    <a class="back-link" href="../index.html">← Retour à l'accueil</a>
+    <article class="article-card">
+      <h1>📚 Knowledge Ecosystem</h1>
+      <div class="article-meta"><span>RAG</span><span>Recherche sémantique</span><span>Base de connaissances</span></div>
+
+      <p class="article-lead">Le Knowledge Ecosystem représente la mémoire de Risk Copilot : documents, index, métadonnées et mécanismes de recherche qui permettent de fournir des réponses contextualisées.</p>
+      <h2>Le rôle du RAG</h2>
+      <p>Le RAG, ou Retrieval Augmented Generation, consiste à récupérer des informations pertinentes dans une base documentaire avant de demander au modèle IA de générer une réponse. Cette méthode permet d’éviter des réponses trop générales et de rapprocher l’analyse du contexte réel de l’entreprise.</p>
+      <div class="diagram">
+        <div class="diagram-title">Schéma RAG simplifié</div>
+        <div class="flow">
+          <div class="node">Documents<small>PDF, rapports, procédures</small></div><div class="arrow">→</div>
+          <div class="node">Indexation<small>découpage + embeddings</small></div><div class="arrow">→</div>
+          <div class="node">Recherche<small>similarité sémantique</small></div><div class="arrow">→</div>
+          <div class="node">Contexte<small>passages pertinents</small></div><div class="arrow">→</div>
+          <div class="node">Réponse IA<small>synthèse sourcée</small></div>
+        </div>
+      </div>
+      <h2>Pipeline documentaire</h2>
+      <div class="layered">
+        <div class="layer"><strong>Ingestion</strong><p>Les documents sont déposés dans un espace de stockage, par exemple Amazon S3.</p></div>
+        <div class="layer"><strong>Préparation</strong><p>Le contenu est nettoyé, découpé en sections et enrichi avec des métadonnées.</p></div>
+        <div class="layer"><strong>Vectorisation</strong><p>Chaque fragment est transformé en représentation vectorielle pour faciliter la recherche sémantique.</p></div>
+        <div class="layer"><strong>Recherche</strong><p>Lorsqu’une question est posée, le système récupère les passages les plus proches du besoin utilisateur.</p></div>
+        <div class="layer"><strong>Génération</strong><p>Le modèle IA utilise les passages retrouvés pour produire une réponse cohérente et contextualisée.</p></div>
+      </div>
+      <h2>Pourquoi cette approche est importante</h2>
+      <p>Dans un projet de gestion des risques, la fiabilité dépend de la capacité à justifier les analyses. Le Knowledge Ecosystem permet de relier les réponses à des sources internes et de limiter les interprétations non contrôlées.</p>
+      <p>Cette partie est essentielle dans un portfolio, car elle montre une compréhension avancée des systèmes IA modernes : l’intelligence ne vient pas seulement du modèle, mais aussi de la qualité des données, de leur indexation et de leur exploitation.</p>
+    </article>
+  </main>
+</body>
+</html>

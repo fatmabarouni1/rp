@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚡ Engineering Challenges | Risk Copilot</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+  <main class="article-page reveal visible">
+    <a class="back-link" href="../index.html">← Retour à l'accueil</a>
+    <article class="article-card">
+      <h1>⚡ Engineering Challenges</h1>
+      <div class="article-meta"><span>Qualité IA</span><span>Performance</span><span>Fiabilité</span></div>
+
+      <p class="article-lead">Le développement de Risk Copilot implique plusieurs défis techniques : fiabilité des réponses, qualité du contexte, performance, sécurité et expérience utilisateur.</p>
+      <h2>Défi 1 : réduire les hallucinations</h2>
+      <p>Les modèles génératifs peuvent produire des réponses convaincantes mais incorrectes si le contexte est insuffisant. Pour limiter ce risque, Risk Copilot doit privilégier les réponses basées sur les documents disponibles et signaler clairement lorsqu’une information manque.</p>
+      <h2>Défi 2 : structurer les prompts</h2>
+      <p>Un prompt non maîtrisé peut donner des résultats variables. Le système doit donc utiliser des instructions stables, des formats de sortie précis et des règles métier adaptées à l’analyse des risques.</p>
+      <div class="diagram">
+        <div class="diagram-title">Boucle d’amélioration continue</div>
+        <div class="flow">
+          <div class="node">Test prompt<small>instruction initiale</small></div><div class="arrow">→</div>
+          <div class="node">Réponse IA<small>analyse produite</small></div><div class="arrow">→</div>
+          <div class="node">Évaluation<small>qualité et sources</small></div><div class="arrow">→</div>
+          <div class="node">Amélioration<small>règles et contexte</small></div>
+        </div>
+      </div>
+      <h2>Défi 3 : gérer la performance</h2>
+      <p>L’analyse documentaire peut être coûteuse si chaque requête relance tout le traitement. Une bonne architecture doit séparer l’indexation des documents, la recherche sémantique et la génération finale afin d’éviter les traitements inutiles.</p>
+      <h2>Défi 4 : concevoir une expérience claire</h2>
+      <p>Un bon Copilot doit être simple à utiliser. L’utilisateur doit comprendre ce que le système a trouvé, pourquoi il propose une recommandation et comment exploiter le résultat.</p>
+      <div class="two-col">
+        <div class="info-box"><h3>Qualité</h3><p>Réponses structurées, sourcées et compréhensibles.</p></div>
+        <div class="info-box"><h3>Fiabilité</h3><p>Gestion des cas où le contexte est insuffisant.</p></div>
+        <div class="info-box"><h3>Performance</h3><p>Traitement optimisé pour éviter les temps d’attente longs.</p></div>
+        <div class="info-box"><h3>UX</h3><p>Interface lisible, orientée action et adaptée aux métiers.</p></div>
+      </div>
+      <h2>Ce que cette partie démontre</h2>
+      <p>Cette section est importante pour un portfolio car elle montre que le projet ne se limite pas à connecter une API IA. Il nécessite une vraie réflexion d’ingénierie : architecture, sécurité, données, prompts, validation et expérience utilisateur.</p>
+    </article>
+  </main>
+</body>
+</html>
